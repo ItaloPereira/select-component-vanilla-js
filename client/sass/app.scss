@@ -1,0 +1,148 @@
+@import "reset";
+@import "colors";
+
+body,
+html {
+	font-size: 16px;
+	font-weight: normal;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.main {
+	display: flex;
+	justify-content: center;
+	min-height: 100vh;
+	box-sizing: border-box;
+	padding-top: 5rem;
+}
+
+.main__form-group {
+	width: 20rem;
+}
+
+.main__form-group__label {
+	display: block;
+	margin-bottom: 1rem;
+}
+
+.autocomplete {
+	width: 100%;
+	position: relative;
+}
+
+.autocomplete__input-container {
+	position: relative;
+}
+
+.autocomplete__input {
+	position: relative;
+	font-size: 1rem;
+	border: 1px solid $border;
+	background: $white;
+	border-radius: 0.5rem;
+	outline: none;
+	padding: 1rem 3rem 1rem 1rem;
+	width: 100%;
+	z-index: 1;
+
+	&:focus-visible {
+		outline: none;
+	}
+
+	&::placeholder {
+		color: $placeholder;
+		opacity: 1;
+	}
+
+	&::-ms-input-placeholder {
+		color: $placeholder;
+	}
+}
+
+.autocomplete__input__clear {
+	position: absolute;
+	right: 0.75rem;
+	top: 50%;
+	transform: translateY(-50%);
+	border: none;
+	background: $close;
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: 50%;
+	font-weight: 600;
+	font-size: 1rem;
+	cursor: pointer;
+	z-index: 1;
+
+	&--hidden {
+		display: none;
+	}
+}
+
+.autocomplete__list {
+	position: absolute;
+	top: 3rem;
+	right: 0;
+	left: 0;
+	padding: 0.5rem 0 0;
+	border: 1px solid $border;
+	border-top: none;
+	border-bottom-right-radius: 0.5rem;
+	border-bottom-left-radius: 0.5rem;
+	max-height: 13rem;
+	overflow: auto;
+	background: $white;
+
+	&--hidden {
+		display: none;
+	}
+}
+
+.autocomplete__temp-value {
+	position: absolute;
+	top: 3px;
+	left: 1px;
+	width: 85%;
+	padding: 1rem 3rem 1rem 1rem;
+	border-radius: 0.5rem;
+	box-sizing: border-box;
+	z-index: 3;
+	background: $white;
+	user-select: none;
+	cursor: text;
+
+	&--hidden {
+		display: none;
+	}
+}
+
+.autocomplete__helper {
+	display: block;
+	margin-top: 0.5rem;
+}
+
+.autocomplete__list__item {
+	padding: 0.75rem;
+	background: $white;
+	cursor: pointer;
+
+	&:hover {
+		background: $primary;
+	}
+
+	&:focus {
+		outline: none;
+		background: $primary;
+	}
+}
+
+.main__form-group__button {
+	margin-top: 1rem;
+	padding: 0.5rem 1rem;
+	width: 100%;
+	background-color: $primary;
+	border: none;
+	border-radius: 0.5rem;
+	font-size: 1rem;
+	cursor: pointer;
+}

@@ -1,0 +1,19 @@
+{
+	"presets": [
+		[
+			"@babel/preset-env",
+			{
+				"targets": {
+					"browsers": ["> 5%", "ie >= 11"]
+				},
+				"debug": false,
+				"corejs": "3",
+				"useBuiltIns": "usage"
+			}
+		]
+	],
+	"plugins": [
+		"@babel/plugin-syntax-dynamic-import",
+		"@babel/plugin-proposal-function-bind"
+	]
+}

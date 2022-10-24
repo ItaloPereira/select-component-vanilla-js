@@ -1,0 +1,54 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Verndale Javascript Code Test</title>
+		<meta name="author" content="Italo Pereira">
+	</head>
+	<body>
+		<main class="main">
+			<form class="main__form">
+				<div class="main__form-group">
+					<label
+						class="main__form-group__label"
+						for="autocomplete-input"
+						>Autocomplete:</label
+					>
+					<div class="autocomplete">
+						<div class="autocomplete__input-container">
+							<input
+								id="autocomplete-input"
+								class="autocomplete__input"
+								type="text"
+								placeholder="Search states"
+								autocomplete="off"
+							/>
+
+							<span
+								class="autocomplete__temp-value autocomplete__temp-value--hidden"
+							></span>
+
+							<button
+								class="autocomplete__input__clear autocomplete__input__clear--hidden"
+								type="button"
+							>
+								x
+							</button>
+						</div>
+						<span class="autocomplete__helper"></span>
+						<ul
+							class="autocomplete__list autocomplete__list--hidden"
+						></ul>
+					</div>
+				</div>
+
+				<div class="main__form-group">
+					<button class="main__form-group__button" type="submit">
+						Submit
+					</button>
+				</div>
+			</form>
+		</main>
+
+		<script src="../dist/main-bundle.js"></script>
+	</body>
+</html>
