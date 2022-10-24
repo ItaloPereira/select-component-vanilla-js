@@ -1,7 +1,7 @@
 {
-	"name": "verndale-code-test",
+	"name": "code-test",
 	"version": "2.0.0",
-	"description": "Verndale Code Test - Vanilla JS",
+	"description": "Code Test - Vanilla JS",
 	"private": true,
 	"scripts": {
 		"start": "webpack"
